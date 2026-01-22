@@ -31,19 +31,28 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label nombreLabel;
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dgvCategorias = new System.Windows.Forms.DataGridView();
-            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.categoriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dgvCategorias = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             nombreLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).BeginInit();
             this.SuspendLayout();
+            // 
+            // nombreLabel
+            // 
+            nombreLabel.AutoSize = true;
+            nombreLabel.Location = new System.Drawing.Point(0, 89);
+            nombreLabel.Name = "nombreLabel";
+            nombreLabel.Size = new System.Drawing.Size(59, 16);
+            nombreLabel.TabIndex = 3;
+            nombreLabel.Text = "Nombre:";
             // 
             // panel1
             // 
@@ -61,39 +70,16 @@
             this.panel1.Size = new System.Drawing.Size(510, 428);
             this.panel1.TabIndex = 0;
             // 
-            // dgvCategorias
+            // btnEliminar
             // 
-            this.dgvCategorias.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvCategorias.AutoGenerateColumns = false;
-            this.dgvCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCategorias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2});
-            this.dgvCategorias.DataSource = this.categoriaBindingSource;
-            this.dgvCategorias.Location = new System.Drawing.Point(3, 205);
-            this.dgvCategorias.Name = "dgvCategorias";
-            this.dgvCategorias.RowHeadersWidth = 51;
-            this.dgvCategorias.RowTemplate.Height = 24;
-            this.dgvCategorias.Size = new System.Drawing.Size(504, 220);
-            this.dgvCategorias.TabIndex = 0;
-            // 
-            // nombreLabel
-            // 
-            nombreLabel.AutoSize = true;
-            nombreLabel.Location = new System.Drawing.Point(0, 89);
-            nombreLabel.Name = "nombreLabel";
-            nombreLabel.Size = new System.Drawing.Size(59, 16);
-            nombreLabel.TabIndex = 3;
-            nombreLabel.Text = "Nombre:";
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.categoriaBindingSource, "Nombre", true));
-            this.txtNombre.Location = new System.Drawing.Point(3, 108);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(238, 22);
-            this.txtNombre.TabIndex = 4;
+            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEliminar.Location = new System.Drawing.Point(432, 176);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.TabIndex = 17;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnLimpiar
             // 
@@ -115,20 +101,34 @@
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // btnEliminar
+            // txtNombre
             // 
-            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEliminar.Location = new System.Drawing.Point(432, 176);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminar.TabIndex = 17;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            this.txtNombre.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.categoriaBindingSource, "Nombre", true));
+            this.txtNombre.Location = new System.Drawing.Point(3, 108);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(238, 22);
+            this.txtNombre.TabIndex = 4;
             // 
             // categoriaBindingSource
             // 
             this.categoriaBindingSource.DataSource = typeof(ENTITIES.Categoria);
+            // 
+            // dgvCategorias
+            // 
+            this.dgvCategorias.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvCategorias.AutoGenerateColumns = false;
+            this.dgvCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCategorias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2});
+            this.dgvCategorias.DataSource = this.categoriaBindingSource;
+            this.dgvCategorias.Location = new System.Drawing.Point(3, 205);
+            this.dgvCategorias.Name = "dgvCategorias";
+            this.dgvCategorias.RowHeadersWidth = 51;
+            this.dgvCategorias.RowTemplate.Height = 24;
+            this.dgvCategorias.Size = new System.Drawing.Size(504, 220);
+            this.dgvCategorias.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -154,10 +154,11 @@
             this.Controls.Add(this.panel1);
             this.Name = "Categorias";
             this.Text = "Categorias";
+            this.Load += new System.EventHandler(this.FrmCategorias_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).EndInit();
             this.ResumeLayout(false);
 
         }

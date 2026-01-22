@@ -35,11 +35,9 @@ namespace UI.auth
 
             if (error == null)
             {
-                // Abrimos el formulario principal (FrmInicio o el Dashboard que creamos)
                 Productos principal = new Productos();
                 principal.Show();
 
-                // Ocultamos el login en lugar de cerrarlo para no matar la app
                 this.Hide();
 
                 principal.FormClosed += (s, args) => this.Close();

@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UI.categoria;
 
 namespace UI.producto
 {
@@ -193,6 +194,12 @@ namespace UI.producto
             cmbCategorias.SelectedIndex = -1;
             btnGuardar.Text = "Guardar";
             txtNombre.Focus();
+        }
+
+        private void btnIrCategoria_Click(object sender, EventArgs e)
+        {
+            Categorias categoria = new Categorias();
+            categoria.ShowDialog();
         }
 
     }

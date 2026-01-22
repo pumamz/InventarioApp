@@ -49,6 +49,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnIrCategorias = new System.Windows.Forms.Button();
             stockLabel = new System.Windows.Forms.Label();
             precioLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
@@ -215,6 +216,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.btnIrCategorias);
             this.panel1.Controls.Add(this.dgvProductos);
             this.panel1.Controls.Add(this.btnLimpiar);
             this.panel1.Controls.Add(this.btnEliminar);
@@ -252,6 +254,16 @@
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
+            // btnIrCategorias
+            // 
+            this.btnIrCategorias.Location = new System.Drawing.Point(659, 72);
+            this.btnIrCategorias.Name = "btnIrCategorias";
+            this.btnIrCategorias.Size = new System.Drawing.Size(95, 23);
+            this.btnIrCategorias.TabIndex = 15;
+            this.btnIrCategorias.Text = "Categorias";
+            this.btnIrCategorias.UseVisualStyleBackColor = true;
+            this.btnIrCategorias.Click += new System.EventHandler(this.btnIrCategoria_Click);
+            // 
             // Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -287,5 +299,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnIrCategorias;
     }
 }
