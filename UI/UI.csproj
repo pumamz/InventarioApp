@@ -46,25 +46,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="categoria\Categorias.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="categoria\Categorias.Designer.cs">
+      <DependentUpon>Categorias.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmInicio.cs">
+    <Compile Include="producto\Productos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmInicio.Designer.cs">
-      <DependentUpon>FrmInicio.cs</DependentUpon>
+    <Compile Include="producto\Productos.Designer.cs">
+      <DependentUpon>Productos.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="categoria\Categorias.resx">
+      <DependentUpon>Categorias.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmInicio.resx">
-      <DependentUpon>FrmInicio.cs</DependentUpon>
+    <EmbeddedResource Include="producto\Productos.resx">
+      <DependentUpon>Productos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -76,7 +76,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="Properties\DataSources\ENTITIES.Categoria.datasource" />
+    <None Include="Properties\DataSources\ENTITIES.EmailRequest.datasource" />
+    <None Include="Properties\DataSources\ENTITIES.LoginRequest.datasource" />
+    <None Include="Properties\DataSources\ENTITIES.LoginResponse.datasource" />
     <None Include="Properties\DataSources\ENTITIES.Producto.datasource" />
+    <None Include="Properties\DataSources\ENTITIES.RegisterRequest.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -106,6 +110,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="auth\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
